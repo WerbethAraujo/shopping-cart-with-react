@@ -25,6 +25,7 @@ export const Nav = styled.nav`
     display: flex;
     align-items: center;
     color: #fff;
+    cursor: pointer;
 
     svg {
       font-size: 1.8rem;

@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/navbar';
 
-import Store from './pages/Store';
+import Store from './pages/store/Store';
 import Success from './pages/Success';
 import Cancel from './pages/Cancel';
 
