@@ -1,12 +1,21 @@
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { Container, Nav } from './styles';
 
+import { CartContext } from '../../../context/CartContext';
+
 import Modal from '../modal';
 
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
 function Navbar() {
+  const cart = useContext(CartContext);
+
   const [isShowModal, setIsShowModal] = useState(false);
+
+  const productsCount = cart.items.reduce(
+    (sum, product) => sum + product.quantity,
+    0
+  );
 
   function handleShowModal() {
     setIsShowModal(true);
@@ -24,7 +33,7 @@ function Navbar() {
           <h1>Ecommerce Store</h1>
           <button onClick={handleShowModal}>
             <AiOutlineShoppingCart />
-            <span>0</span>
+            <span>{productsCount}</span>
           </button>
         </Nav>
       </Container>

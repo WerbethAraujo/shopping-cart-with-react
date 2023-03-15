@@ -42,7 +42,7 @@ function CartProvider({ children }) {
   function removeOneFromCart(id) {
     const quantity = getProductQuantity(id);
 
-    if (quantity > 0) {
+    if (quantity === 1) {
       deleteFromCart(id);
     } else {
       setCartProducts(

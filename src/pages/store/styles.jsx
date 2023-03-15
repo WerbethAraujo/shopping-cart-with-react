@@ -17,4 +17,8 @@ export const Container = styled.div`
   height: 100vh;
   margin: 0 auto;
   gap: 2rem;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 2fr;
+  }
 `;
