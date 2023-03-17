@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  position: fixed;
   background: #fff;
   width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 `;
 
 export const Nav = styled.nav`

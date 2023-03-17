@@ -8,7 +8,7 @@ function getProductData(id) {
   let productData = productsArray.find((product) => product.id === id);
 
   if (productData === undefined) {
-    console.log(`Os dados doproduto não exitem para esse id: ${id}`);
+    console.log(`Os dados do produto não exitem para esse ID: ${id}`);
     return undefined;
   }
 

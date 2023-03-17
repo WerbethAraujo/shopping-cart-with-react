@@ -2,7 +2,7 @@ import { useContext } from 'react';
 
 import { AiOutlineMinusCircle, AiOutlinePlusCircle } from 'react-icons/ai';
 
-import { CartContext } from '../../../context/CartContext';
+import { CartContext } from '../../context/CartContext';
 import { CardContainer } from './styles';
 
 function Card({ product }) {
@@ -11,6 +11,8 @@ function Card({ product }) {
   const cart = useContext(CartContext);
 
   const productQty = cart.getProductQuantity(id);
+
+  const total = cart.getTotalCost();
 
   return (
     <CardContainer>
@@ -33,7 +35,12 @@ function Card({ product }) {
               </button>
             </div>
           </div>
-          <button className='btn-danger'>Remover do Carrinho</button>
+          <button
+            onClick={() => cart.deleteFromCart(id)}
+            className='btn-danger'
+          >
+            Remover do Carrinho
+          </button>
         </>
       ) : (
         <button onClick={() => cart.addOneToCart(id)}>

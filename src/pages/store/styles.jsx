@@ -7,6 +7,7 @@ export const Header = styled.header`
 
   h1 {
     font-size: 3rem;
+    margin-top: 5rem;
   }
 `;
 

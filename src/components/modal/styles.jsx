@@ -18,11 +18,12 @@ export const Container = styled.div`
   background: #fff;
   max-width: 500px;
   width: 100%;
-  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   border-radius: 5px;
+  padding: 10px;
 
   span {
     position: absolute;
@@ -30,5 +31,22 @@ export const Container = styled.div`
     right: 10px;
     font-size: 1.5rem;
     cursor: pointer;
+  }
+
+  .productsModal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .confirm-btn {
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin: 15px 0;
+    background: #00ff00;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
   }
 `;

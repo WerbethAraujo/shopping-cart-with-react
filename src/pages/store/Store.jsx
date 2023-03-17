@@ -1,6 +1,6 @@
 import Card from '../../components/card';
 
-import { productsArray } from '../../../productsData';
+import { productsArray } from '../../data/productsData';
 
 import { Container, Header } from './styles';
 
